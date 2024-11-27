@@ -73,7 +73,7 @@ class OnBoardScreen extends StatelessWidget {
                         borderRadius: BorderRadius.circular(8.r)),
                   ),
                   child: Text(
-                    "Sing Up",
+                    "Sign Up",
                     style: GoogleFonts.roboto(
                       fontSize: 18.sp,
                       color: const Color(

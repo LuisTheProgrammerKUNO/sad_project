@@ -29,9 +29,21 @@ class _AccountScreenState extends State<AccountScreen> {
               height: 30,
             ),
             _buildObject(Icons.settings, 'Settings', const Color(0xff2680e6)),
-            _buildObject(
-                Icons.calendar_today, 'Booking', const Color(0xff069295)),
-            _buildObject(Icons.logout, 'Logout', const Color(0xFF3e7942)),
+
+            GestureDetector(
+                  onTap: () {
+                    Navigator.pushNamed(context, '/Book');
+                  },
+                  child: _buildObject(Icons.calendar_today, 'Booking', const Color(0xff069295)),
+                ),
+
+
+            GestureDetector(
+              onTap: () {
+                Navigator.pushReplacementNamed(context, '/Login');
+              },
+              child: _buildObject(Icons.logout, 'Logout', const Color(0xFF3e7942)),
+            ),
           ],
         ),
       ),
@@ -110,3 +122,4 @@ class _AccountScreenState extends State<AccountScreen> {
     );
   }
 }
+
